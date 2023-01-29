@@ -1,0 +1,35 @@
+<head>
+    <script type="text/javascript">
+   
+   function calcula(operacio) {
+    var num1;
+    var num2;
+    var res;
+    num1 = parseInt(document.calculadora.valor1.value);
+    num2 = parseInt(document.calculadora.valor2.value);
+   
+    if (operacio == 1) res = num1 + num2;
+    if (operacio == 2) res = num1 - num2;
+    if (operacio == 3) res = num1 * num2;
+    if (operacio == 4) res = num1 / num2;
+   
+    document.calculadora.resultado.value = res;
+    }
+   
+   </script>
+    </head>
+   
+    <body>
+    <form name="calculadora">
+   
+        Primer número: <input type="text" name="valor1"><br>
+    Segundo número: <input type="text" name="valor2"><br>
+   
+    <input type="button" name="button1" value="sumar" onclick="calcula(1)">
+    <input type="button" name="button2" value="restar" onclick="calcula(2)">
+    <input type="button" name="button3" value="multiplicar" onclick="calcula(3)">
+    <input type="button" name="button4" value="dividir" onclick="calcula(4)"><br>
+    Resultado: <input type="text" name="resultado">
+   
+</form>
+    </body>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"/>
+<script>
+let dato, altura;
+dato = prompt("Escribe tu altura en cm", "0");
+altura = parseInt(dato);
+
+if (altura >180) resultado = "Por encima de la media";
+else
+{
+if (altura >=140)
+resultado = "Altura media";
+else
+resultado = "Por debajo de la media";
+}
+document.write(resultado);
+</script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"/>
+<title>Juego Dados</title>
+<script>
+
+let dinero= 50, ganancias = 0 , apuesta =20, numero=0;
+
+while (dinero > 0 && apuesta >0) // si la apuesta es cero, acaba el juego.
+{
+let dado = Math.floor(Math.random() * 6) + 1;
+
+let num = prompt("A que número quiere apostar, del 1 al 6 ", "1");
+numero = parseInt(num);
+
+let cantidad = prompt("Cantidad que quiere apostar ", "20");
+apuesta = parseInt(cantidad);
+
+document.write (`Ha salido el número: ${dado} <br>`);
+
+if (numero == dado)
+{
+dinero = dinero + apuesta*2
+alert(`Has ganado ${dinero}`)
+}
+else
+{
+dinero = dinero - apuesta
+alert(`Has perdido ${apuesta} ahora tienes ${dinero}`)
+}
+
+if (dinero == 0) {
+alert("Game over")
+break;
+}
+if (dinero >= 200) {
+alert("Has ganado el juego")
+break;
+}
+}
+
+</script>
+</head><body></body>
+</html>
